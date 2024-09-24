@@ -15,6 +15,8 @@ noPreview="--nopreview"
 imgSharpness=100
 
 camPars=" ${noPreview} --sharpness ${imgSharpness} --width ${imgWidth} --height ${imgHeight} "
-echo "Camera Parameters: ${camPars}"
+#echo "Camera Parameters: ${camPars}"
+imgFileName=${SRCPATH}/${CAMFLDR}/${TIMESTAMP}.${FEXT}
 
-/usr/bin/raspistill ${camPars} --output ${SRCPATH}/${CAMFLDR}/${TIMESTAMP}.${FEXT}
+/usr/bin/raspistill ${camPars} --output ${SRCPATH}/${CAMFLDR}/${imgFileName}
+echo "Shot taken and saved at ${imgFileName}"
