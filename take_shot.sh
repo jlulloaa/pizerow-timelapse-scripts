@@ -14,7 +14,7 @@ imgHeight=960
 noPreview="--nopreview"
 imgSharpness=100
 
-camPars=" -v ${noPreview} --sharpness ${imgSharpness} --width ${imgWidth} --height ${imgHeight} "
+camPars=" ${noPreview} --sharpness ${imgSharpness} --width ${imgWidth} --height ${imgHeight} "
 echo "Camera Parameters: ${camPars}"
 
-/usr/bin/raspistill ${camPars} --output ${SRCPATH}/${CAMFLDR}/${FECHA}.${FEXT}
+/usr/bin/raspistill ${camPars} --output ${SRCPATH}/${CAMFLDR}/${TIMESTAMP}.${FEXT}
